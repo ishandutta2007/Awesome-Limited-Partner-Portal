@@ -125,7 +125,7 @@ Fully dedicated open-source LP portal platforms tailored explicitly for private 
 
 # 📊 Open-Source Fund & Portfolio Management
 
-Open-source core banking, financial management, wealth tracking, and portfolio software sorted by GitHub stars:
+Open-source core banking, financial management, wealth tracking, and portfolio software sorted by GitHub_Stars:
 
 | Project | Stars | Primary Role & Description |
 | :--- | :--- | :--- |
@@ -179,7 +179,7 @@ Engaging LP portal experiences require interactive financial reporting and metri
 
 # 💼 Open-Source Investor CRM
 
-Manage Limited Partner relationships, commitment pipelines, fundraising calls, and LP contact directories sorted by GitHub stars:
+Manage Limited Partner relationships, commitment pipelines, fundraising calls, and LP contact directories sorted by GitHub_Stars:
 
 | Project | Stars | Primary Role & Description |
 | :--- | :--- | :--- |
