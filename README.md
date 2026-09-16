@@ -1,37 +1,43 @@
-# Awesome-Limited-Partner-Portal
+# 🏦 Awesome Limited Partner (LP) Portal Infrastructure
 
-## 🏦 Top Limited Partner (LP) Portals & Open-Source Investor Relations Infrastructure
+<p center>
+  <img src="./assets/banner.svg" alt="Awesome Limited Partner Portal Banner" width="100%">
+</p>
 
-> A curated list of **Limited Partner (LP) portals, investor reporting platforms, private-markets investor relations software, fund-management platforms and open-source software** for building modern LP experiences.
+## 💼 Top Limited Partner (LP) Portals, Private Equity Software & Open-Source Investor Relations Infrastructure
 
-LP portals sit at the intersection of:
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
-* Investor relations
-* Fund administration
-* Fund accounting
-* Capital calls
-* Distributions
-* Investor reporting
-* Portfolio performance
-* Data rooms
-* Document management
-* KYC / AML
-* Fundraising
-* Investor communications
-* Portfolio analytics
+> 🚀 A curated list of **Limited Partner (LP) portals, investor reporting platforms, private-markets investor relations software, venture capital fund-management platforms, private equity CRM, fund accounting software, and open-source fintech building blocks** for modern LP experiences.
 
-Modern LP portals allow investors to securely access their fund information, documents, performance data, capital activity and communications from a centralized interface. For example, Juniper Square describes its portal as a unified environment for LPs to access investment data, documents, performance information and investor communications.
+Institutional LP portals sit at the operational intersection of:
 
-This repository focuses primarily on **open-source and self-hostable alternatives**, while maintaining a separate list of commercial platforms such as Juniper Square, Allvue, Dynamo Software, InvestorFlow, Fundwave, Carta, Visible, eFront, Backstop and SEI Archway.
+* 🤝 **Investor Relations (IR)** & LP Engagement
+* 🏦 **Fund Administration** & Transfer Agency
+* 💰 **Fund Accounting** & General Ledger
+* 📜 **Capital Calls** & Distribution Notices
+* 📊 **Investor Reporting** & Performance Dashboards
+* 📈 **Portfolio Performance & KPI Tracking** (IRR, TVPI, DPI, MOIC)
+* 🔐 **Virtual Data Rooms (VDR)** & Document Security
+* 📝 **KYC / AML Onboarding** & Investor Subscription Workflows
+* 📑 **Tax Document Delivery** (Schedule K-1 / Tax Statements)
 
-> **Important:** Unlike generic SaaS dashboards, an institutional LP portal depends heavily on fund accounting, investor-level permissions, capital-account data, document security, audit trails and integrations with fund administrators. Consequently, a complete open-source alternative is usually a **composable stack** rather than a single application.
+Modern LP portals allow institutional investors, family offices, and high-net-worth individuals to securely access their fund performance, capital-account statements, notices, and communications from a centralized, branded dashboard. For example, platforms like **Juniper Square** and **Carta** provide unified portals connecting fund operations directly with investor reporting.
+
+This repository provides an exhaustive guide to **commercial SaaS platforms** and **open-source self-hostable alternatives**, detailing architectural patterns for building a modern LP portal stack.
+
+> 💡 **Important Architecture Note:** Unlike generic B2B SaaS dashboards, an institutional LP portal requires granular row-level and object-level permissions, fund accounting ledgers, audit trails, and strict data security compliance. A complete open-source alternative is typically built as a **composable stack** combining identity management, financial ledgers, document storage, and reporting engines.
 
 ---
 
 ## 📑 Table of Contents
 
-* [☁️ SaaS/Hosted Platforms](#️-saashosted-platforms)
-* [🌍 Open-Source](#-open-source)
+* [☁️ SaaS & Commercial LP Platforms](#️-saas--commercial-lp-platforms)
+* [🌍 Open-Source Ecosystem](#-open-source-ecosystem)
 * [🏦 Open-Source LP Portal Platforms](#-open-source-lp-portal-platforms)
 * [📊 Open-Source Fund & Portfolio Management](#-open-source-fund--portfolio-management)
 * [💰 Open-Source Fund Accounting & Ledger](#-open-source-fund-accounting--ledger)
@@ -39,1485 +45,327 @@ This repository focuses primarily on **open-source and self-hostable alternative
 * [💼 Open-Source Investor CRM](#-open-source-investor-crm)
 * [📁 Open-Source Data Rooms & Document Management](#-open-source-data-rooms--document-management)
 * [🔐 Open-Source Identity & Access Management](#-open-source-identity--access-management)
-* [📊 Open-Source Business Intelligence](#-open-source-business-intelligence)
+* [📊 Open-Source Business Intelligence & Analytics](#-open-source-business-intelligence--analytics)
 * [📑 Open-Source Document & Reporting Infrastructure](#-open-source-document--reporting-infrastructure)
+* [⚡ Open-Source Backend, Database & Workflow Infrastructure](#-open-source-backend-database--workflow-infrastructure)
 * [🤖 Open-Source AI for LP Reporting](#-open-source-ai-for-lp-reporting)
 * [🧩 Commercial Platform → Open-Source Equivalent](#-commercial-platform--open-source-equivalent)
 * [🏗️ LP Portal Architecture](#️-lp-portal-architecture)
-* [🔄 Open-Source LP Portal Architecture](#-open-source-lp-portal-architecture)
-* [📊 Investor Reporting Architecture](#-investor-reporting-architecture)
-* [🔐 LP Data Security Architecture](#-lp-data-security-architecture)
-* [⚖️ Commercial vs Open-Source](#️-commercial-vs-open-source)
-* [🚀 Recommended Open-Source Stacks](#-recommended-open-source-stacks)
-* [📊 LP Portal Technology Comparison](#-lp-portal-technology-comparison)
-* [🎯 Recommended Projects by Use Case](#-recommended-projects-by-use-case)
-* [🏢 Building a Juniper Square Alternative](#-building-a-juniper-square-alternative)
-* [🏦 Building an Open-Source LP Portal](#-building-an-open-source-lp-portal)
-* [🌐 Open-Source LP Technology Landscape](#-open-source-lp-technology-landscape)
-* [🧠 Why Open-Source LP Infrastructure Matters](#-why-open-source-lp-infrastructure-matters)
+* [💖 Support & Sponsorship](#-support--sponsorship)
 * [🤝 Contributing](#-contributing)
+* [📈 Star History](#-star-history)
 * [⚠️ Disclaimer](#️-disclaimer)
 
 ---
 
-# ☁️ SaaS/Hosted Platforms
+# ☁️ SaaS & Commercial LP Platforms
 
-Commercial LP portal platforms combine investor-facing portals with some combination of fund accounting, investor relations, reporting, portfolio monitoring, CRM, document management and fund administration.
+The private capital software market (including LP portals, fund accounting, and deal management) is estimated at **$2.4 Billion USD** (growing at **11.0% CAGR** toward **$5.1 Billion by 2032**). The market is **highly fragmented but rapidly consolidating**, moving away from disparate point solutions toward unified AI-native private equity operating systems.
 
-| Platform                                                                                                            | Company            | Primary Focus                          | Key Capabilities                                                                |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------- | ------------------------------------------------------------------------------- |
-| [Juniper Square](https://www.junipersquare.com/)                                                                    | Juniper Square     | Private-markets operating platform     | LP portal, investor reporting, onboarding, fundraising, CRM, data rooms         |
-| [Allvue](https://www.allvuesystems.com/)                                                                            | Allvue Systems     | Alternative investment management      | Investor portal, fund accounting, portfolio management, reporting               |
-| [Dynamo Software](https://www.dynamosoftware.com/)                                                                  | Dynamo Software    | Alternative investment management      | Investor relations, CRM, portfolio management, reporting                        |
-| [InvestorFlow](https://www.investorflow.com/)                                                                       | InvestorFlow       | Private-markets CRM & investor portal  | Fundraising, LP relations, CRM, investor engagement, analytics                  |
-| [Fundwave](https://www.fundwave.com/)                                                                               | Fundwave           | Fund management                        | Fund accounting, investor management, reporting                                 |
-| [Carta](https://carta.com/)                                                                                         | Carta              | Fund administration & private markets  | Fund administration, LP reporting, capital activity, K-1s, portfolio management |
-| [Visible](https://visible.vc/)                                                                                      | Visible            | Portfolio reporting                    | Investor updates, portfolio monitoring, reporting and fundraising               |
-| [eFront](https://www.blackrock.com/aladdin/en-us/solutions/eFront)                                                  | BlackRock / eFront | Alternative investment management      | Portfolio management, analytics, investor reporting                             |
-| [Backstop Solutions](https://www.backstopsolutions.com/)                                                            | Backstop Solutions | Alternative investment management      | CRM, investor relations, research, portfolio analytics                          |
-| [SEI Archway](https://www.seic.com/)                                                                                | SEI                | Investment accounting & administration | Private-markets accounting, reporting, investor services                        |
-| [Juniper Square Portal](https://www.junipersquare.com/platform/portal)                                              | Juniper Square     | LP experience                          | Secure documents, investment information, performance and communication         |
-| [FIS Digital Data Exchange](https://www.fisglobal.com/products/fis-private-capital-suite/fis-digital-data-exchange) | FIS                | Investor portal                        | Reporting, data visualization, secure documents, e-signing                      |
-| [Apex Group](https://www.apexgroup.com/)                                                                            | Apex Group         | Fund administration                    | Investor portal, fund administration, reporting                                 |
-| [FundCount](https://www.fundcount.com/)                                                                             | FundCount          | Fund accounting                        | Accounting, portfolio management, reporting                                     |
-| [Altvia](https://www.altvia.com/)                                                                                   | Altvia             | Private-capital CRM                    | CRM, investor relations, fundraising and reporting                              |
-| [Cobalt](https://www.cobalt-lp.com/)                                                                                | Cobalt             | LP reporting                           | Portfolio monitoring, reporting and investor communications                     |
-| [Seraf](https://www.seraf.io/)                                                                                      | Seraf              | VC investor management                 | LP portal, documents, capital calls, distributions and reporting                |
+Below is a detailed overview of commercial SaaS LP portals sorted by **company scale (Annual Revenue / Valuation)**:
 
-Commercial LP platforms increasingly combine portal functionality with broader fund operating systems. Juniper Square, for example, connects investor onboarding, reporting, portal functionality, CRM and fund operations, while Allvue provides investor dashboards, secure document sharing, automated reporting and investor communication.
-
-Carta similarly combines fund administration with LP access to investment performance, capital calls, distributions, tax documents and related fund information.
+| Platform | Company / Vendor | Primary Focus | Revenue / Valuation Scale (Desc) | Starting Price (Paid Tier) | Free Tier / Trial Limits | Key Capabilities |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| [BlackRock eFront](https://www.blackrock.com/aladdin/en-us/solutions/eFront) | BlackRock, Inc. (NYSE: BLK) | Alternative Investment Management | **$24.22 Billion Revenue** (Acquired for $1.3 Billion) | $50,000 / year starting enterprise contract | No Free Tier or Trial (Enterprise Demo Only) | Portfolio management, LP reporting, fund accounting, waterfall analytics |
+| [SEI Archway](https://www.seic.com/) | SEI Investments Co. (NASDAQ: SEIC) | Family Office & Investment Accounting | **$2.30 Billion Revenue** ($8.5 Billion Valuation) | $30,000 / year base software licensing | No Free Tier or Trial (Custom Consultation Only) | Private equity accounting, tax reporting, LP portal, family office suite |
+| [Apex Group](https://www.apexgroup.com/) | Apex Group Ltd. | Global Fund Administration & IR | **$1.50 Billion Revenue** (Private PE-backed) | $25,000 / year fund admin package | No Free Tier or Trial (Custom Proposal Only) | Investor portal, global fund administration, ESG reporting, compliance |
+| [Juniper Square](https://www.junipersquare.com/) | Juniper Square, Inc. | Private Markets Operating Platform | **$1.10 Billion Valuation** ($139.8 Million Revenue) | $10,000 / year minimum platform fee | No Free Tier or Trial (Sales Demo Required) | LP portal, CRM, investor onboarding, capital calls, distributions, VDR |
+| [Carta](https://carta.com/) | Carta, Inc. | Fund Admin & Private Equity Management | **$3.50 Billion Valuation** ($500 Million Revenue) | $2,900 / year starting tier (avg. $14,000/yr) | **Carta Launch Plan** (Free for startups with ≤25 stakeholders & <$1M raised; no trial limit) | Cap table management, LP portal, K-1 generation, portfolio monitoring |
+| [Allvue Systems](https://www.allvuesystems.com/) | Allvue Systems | Alternative Investment Software | **$250 Million Revenue** (Private PE-backed) | $20,000 / year base platform fee | No Free Tier or Trial (Sales Demo Required) | LP portal, fund accounting, deal management, pipeline tracking |
+| [FIS Digital Data Exchange](https://www.fisglobal.com/products/fis-private-capital-suite/fis-digital-data-exchange) | FIS (NYSE: FIS) | Capital Markets & Investor Portal | **$150 Million Revenue** (Division of $10B+ FIS) | $15,000 / year starting portal license | No Free Tier or Trial (Sales Demo Required) | Investor reporting, interactive visualization, electronic signing, VDR |
+| [Dynamo Software](https://www.dynamosoftware.com/) | Dynamo Software | Private Equity CRM & IR | **$100 Million Revenue** (Private PE-backed) | $12,000 / year starting IR package | No Free Tier or Trial (Sales Demo Required) | LP CRM, investor relations, research management, portal |
+| [InvestorFlow](https://www.investorflow.com/) | InvestorFlow | Private Markets CRM & Portal | **$50 Million Revenue** (Private PE-backed) | $10,000 / year starting license | No Free Tier or Trial (Sales Demo Required) | Investor engagement, LP portal, fundraising pipeline, analytics |
+| [Backstop Solutions](https://www.backstopsolutions.com/) | Backstop Solutions | Investment Management Suite | **$45 Million Revenue** (Part of Ion Group) | $8,500 / year starting module | No Free Tier or Trial (Guided Demo Only) | CRM, LP relations, portfolio analytics, research management |
+| [FundCount](https://www.fundcount.com/) | FundCount, LLC | Investment & Fund Accounting | **$25 Million Revenue** | $7,500 / year starting software fee | No Free Tier or Trial (30-day sandbox demo available on request) | Double-entry fund accounting, LP statement generation, portfolio tracking |
+| [Altvia](https://www.altvia.com/) | Altvia Solutions | Private Equity CRM & LP Portal | **$20 Million Revenue** | $6,000 / year starting CRM package | No Free Tier or Trial (Sales Demo Required) | Salesforce-native PE CRM, LP portal, data room, investor communications |
+| [Fundwave](https://www.fundwave.com/) | Fundwave | Modern Fund Management Software | **$12 Million Revenue** | $250 / month ($3,000/yr) starting tier | **14-day Free Trial** (Full access to fund accounting & portal features) | Fund accounting, LP capital calls, distribution notices, investor portal |
+| [Visible.vc](https://visible.vc/) | Visible VC | Portfolio Monitoring & Investor Updates | **$7.20 Million Revenue** ($5.3M Funding) | $59 / month ($708/yr) Base tier | **Starter Plan Free Forever** (Send updates to 100 investors, 2 pitch decks; 14-day trial for paid features) | Portfolio KPI collection, LP updates, pitch decks, lightweight data room |
+| [Cobalt](https://www.cobalt-lp.com/) | Cobalt Software (FactSet) | LP Portfolio Monitoring & Analysis | **$5.00 Million Revenue** (Acquired by FactSet) | $5,000 / year starting reporting module | No Free Tier or Trial (Sales Demo Required) | LP portfolio analytics, benchmarking, cash flow forecasting |
+| [Seraf](https://www.seraf.io/) | Seraf Systems | Angel & VC Investor Management | **$3.00 Million Revenue** | $12 / month ($144/yr) Professional plan | **14-day Free Trial** (Full feature access; no credit card required) | LP portal, portfolio tracking, document vault, capital call tracking |
 
 ---
 
-# 🌍 Open-Source
+# 🌍 Open-Source Ecosystem
 
-The open-source LP portal ecosystem is much smaller than the commercial ecosystem.
-
-However, a substantial portion of the underlying technology can be assembled from open-source projects:
+While commercial SaaS platforms provide out-of-the-box suites, open-source building blocks offer total control over sensitive LP financial data, customizable workflows, and zero platform lock-in.
 
 ```text
-                    OPEN-SOURCE LP PORTAL
-                            │
-       ┌────────────────────┼────────────────────┐
-       │                    │                    │
-       ▼                    ▼                    ▼
- Investor Portal        Fund Data            Reporting
-       │                    │                    │
-       ▼                    ▼                    ▼
- Next.js / React       Fineract / Ledger     Metabase
- Supabase              Formance              Apache Superset
- Keycloak              PostgreSQL            Grafana
-       │                    │                    │
-       └────────────────────┼────────────────────┘
-                            │
-                            ▼
-                     Document Storage
-                            │
-                            ▼
-                       MinIO / S3
+                    OPEN-SOURCE LP PORTAL ARCHITECTURE
+                                    │
+       ┌────────────────────────────┼────────────────────────────┐
+       │                            │                            │
+       ▼                            ▼                            ▼
+ Investor Portal              Fund Ledger & Data              Reporting & Analytics
+       │                            │                            │
+       ▼                            ▼                            ▼
+ Next.js / React               Fineract / Ledger             Metabase / Superset
+ Supabase / Appwrite           Formance                      Grafana / Evidence
+ Keycloak / Authentik          PostgreSQL                    Docling / WeasyPrint
+       │                            │                            │
+       └────────────────────────────┼────────────────────────────┘
+                                    │
+                                    ▼
+                             Secure Document Vault
+                                    │
+                                    ▼
+                         MinIO / Paperless-ngx / S3
 ```
-
-The most directly relevant open-source project identified in this landscape is **Hemrock Reporting**, an Apache-2.0-licensed platform that explicitly includes LP reporting, fund accounting, portfolio monitoring and a fund-branded LP portal.
 
 ---
 
 # 🏦 Open-Source LP Portal Platforms
 
-## ⭐ Hemrock Reporting
+Fully dedicated open-source LP portal platforms tailored explicitly for private equity and venture capital funds:
 
-[Hemrock Reporting](https://github.com/tdavidson/reporting) is an open-source venture-capital reporting and fund-management platform that includes:
-
-* LP portal
-* LP capital tracking
-* Fund accounting
-* Portfolio KPI collection
-* Portfolio dashboards
-* Investor reporting
-* Fund performance reporting
-* Fund and SPV accounting
-* Capital-account statements
-* Investor documents
-* Quarterly reporting
-* AI-assisted investor analysis
-* Deal screening
-* Due diligence
-
-The project is released under **Apache-2.0** and is designed to be self-hosted. Its LP portal provides fund-branded access to capital-account statements, quarterly letters and fund documents.
-
-```text
-                     Hemrock Reporting
-
-        Portfolio Data ────────┐
-                               │
-        Fund Accounting ───────┤
-                               │
-        LP Capital ────────────┤
-                               ▼
-                         Reporting Engine
-                               │
-                               ▼
-                          LP Portal
-                               │
-                  ┌────────────┼────────────┐
-                  ▼            ▼            ▼
-              Statements   Fund Docs    Letters
-```
+| Project | Stars | Primary Role & Description |
+| :--- | :--- | :--- |
+| [Hemrock Reporting](https://github.com/tdavidson/reporting) | [![Stars](https://img.shields.io/github/stars/tdavidson/reporting?style=social&color=white)](https://github.com/tdavidson/reporting/stargazers) | 🏢 **Venture Capital Reporting & LP Portal** — Apache-2.0 platform featuring LP capital tracking, double-entry fund accounting, portfolio KPI collection, quarterly reports, and fund-branded LP statements. |
 
 ---
 
 # 📊 Open-Source Fund & Portfolio Management
 
-| Project                                                      | Primary Role                                       |
-| ------------------------------------------------------------ | -------------------------------------------------- |
-| [Hemrock Reporting](https://github.com/tdavidson/reporting)  | VC reporting, LP portal, fund accounting           |
-| [Apache Fineract](https://github.com/apache/fineract)        | Financial accounts and lending infrastructure      |
-| [Mifos X](https://github.com/openMF/mifos-x)                 | Core financial management                          |
-| [Formance](https://github.com/formancehq/stack)              | Financial ledger and money flows                   |
-| [ERPNext](https://github.com/frappe/erpnext)                 | Accounting and business management                 |
-| [Odoo Community](https://github.com/odoo/odoo)               | Accounting / ERP                                   |
-| [Portfolio Performance](https://github.com/buchen/portfolio) | Investment portfolio tracking                      |
-| [Ghostfolio](https://github.com/ghostfolio/ghostfolio)       | Open-source wealth / portfolio analytics           |
-| [Maybe](https://github.com/maybe-finance/maybe)              | Open-source personal finance / investment platform |
-| [Quadra](https://www.quadraplatform.com/)                    | Open investment-management data model              |
+Open-source core banking, financial management, wealth tracking, and portfolio software sorted by GitHub stars:
 
-> **License note:** Quadra is currently described as source-available under Business Source License 1.1 rather than conventional permissive open source. It is therefore listed separately from fully open-source projects.
+| Project | Stars | Primary Role & Description |
+| :--- | :--- | :--- |
+| [Maybe](https://github.com/maybe-finance/maybe) | [![Stars](https://img.shields.io/github/stars/maybe-finance/maybe?style=social&color=white)](https://github.com/maybe-finance/maybe/stargazers) | 💎 Open-source personal finance and asset / investment management platform. |
+| [Odoo Community](https://github.com/odoo/odoo) | [![Stars](https://img.shields.io/github/stars/odoo/odoo?style=social&color=white)](https://github.com/odoo/odoo/stargazers) | 🏢 Enterprise accounting, financial management, asset tracking, and custom ERP suite. |
+| [ERPNext](https://github.com/frappe/erpnext) | [![Stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers) | 📦 Flexible open-source ERP with comprehensive general ledger and financial accounting modules. |
+| [Ghostfolio](https://github.com/ghostfolio/ghostfolio) | [![Stars](https://img.shields.io/github/stars/ghostfolio/ghostfolio?style=social&color=white)](https://github.com/ghostfolio/ghostfolio/stargazers) | 👻 Wealth management and multi-asset portfolio performance tracking engine. |
+| [Portfolio Performance](https://github.com/buchen/portfolio) | [![Stars](https://img.shields.io/github/stars/buchen/portfolio?style=social&color=white)](https://github.com/buchen/portfolio/stargazers) | 📈 Desktop & self-hosted open-source software to calculate investment portfolio performance (IRR, True Time-Weighted Return). |
+| [Apache Fineract](https://github.com/apache/fineract) | [![Stars](https://img.shields.io/github/stars/apache/fineract?style=social&color=white)](https://github.com/apache/fineract/stargazers) | 🏦 Core banking and financial institution software engine supporting double-entry accounting and portfolio balances. |
+| [Formance Stack](https://github.com/formancehq/stack) | [![Stars](https://img.shields.io/github/stars/formancehq/stack?style=social&color=white)](https://github.com/formancehq/stack/stargazers) | ⚡ Programmable financial infrastructure for complex money flows, ledgering, and fund distribution tracking. |
+| [Hemrock Reporting](https://github.com/tdavidson/reporting) | [![Stars](https://img.shields.io/github/stars/tdavidson/reporting?style=social&color=white)](https://github.com/tdavidson/reporting/stargazers) | 📊 Dedicated open-source VC & PE fund management software with LP portal functionality. |
+| [Mifos X](https://github.com/openMF/mifos-x) | [![Stars](https://img.shields.io/github/stars/openMF/mifos-x?style=social&color=white)](https://github.com/openMF/mifos-x/stargazers) | 🌐 Financial management frontend for microfinance and institutional accounts. |
+| [Quadra](https://www.quadraplatform.com/) | *Source Available* | 🔍 Open investment-management data model (Business Source License 1.1). |
 
 ---
 
 # 💰 Open-Source Fund Accounting & Ledger
 
-A serious LP portal requires a reliable source of financial truth.
+Institutional LP portals require immutable financial truth for capital accounts, subscriptions, capital calls, and distributions:
 
-```text
-                       FUND EVENTS
-                            │
-             ┌──────────────┼──────────────┐
-             ▼              ▼              ▼
-        Capital Call    Investment     Distribution
-             │              │              │
-             └──────────────┼──────────────┘
-                            ▼
-                       FUND LEDGER
-                            │
-                            ▼
-                    LP CAPITAL ACCOUNTS
-                            │
-                            ▼
-                     LP REPORTING
-```
-
-| Project                                                     | Description                                      |
-| ----------------------------------------------------------- | ------------------------------------------------ |
-| [Formance Ledger](https://github.com/formancehq/ledger)     | Programmable financial ledger                    |
-| [Apache Fineract](https://github.com/apache/fineract)       | Financial accounting and accounts                |
-| [Hemrock Reporting](https://github.com/tdavidson/reporting) | Fund accounting and LP capital tracking          |
-| [ERPNext](https://github.com/frappe/erpnext)                | Accounting and financial management              |
-| [Odoo Community](https://github.com/odoo/odoo)              | Accounting / ERP                                 |
-| [Kill Bill](https://github.com/killbill/killbill)           | Billing and financial transaction infrastructure |
-
-Hemrock's accounting module can maintain double-entry books for funds, SPVs and related entities and derive LP capital accounts and statements from the ledger.
+| Project | Stars | Primary Role & Description |
+| :--- | :--- | :--- |
+| [Odoo Community](https://github.com/odoo/odoo) | [![Stars](https://img.shields.io/github/stars/odoo/odoo?style=social&color=white)](https://github.com/odoo/odoo/stargazers) | 🏢 Full general ledger double-entry accounting with multi-currency support. |
+| [ERPNext](https://github.com/frappe/erpnext) | [![Stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers) | 📦 General ledger, automated financial statement generation, and invoicing. |
+| [Firefly III](https://github.com/firefly-iii/firefly-iii) | [![Stars](https://img.shields.io/github/stars/firefly-iii/firefly-iii?style=social&color=white)](https://github.com/firefly-iii/firefly-iii/stargazers) | 💸 Self-hosted double-entry financial tracking and account management. |
+| [Invoice Ninja](https://github.com/invoiceninja/invoiceninja) | [![Stars](https://img.shields.io/github/stars/invoiceninja/invoiceninja?style=social&color=white)](https://github.com/invoiceninja/invoiceninja/stargazers) | 🧾 Invoicing and payment transaction management for LP capital call notices. |
+| [Kill Bill](https://github.com/killbill/killbill) | [![Stars](https://img.shields.io/github/stars/killbill/killbill?style=social&color=white)](https://github.com/killbill/killbill/stargazers) | 💳 Open-source billing and recurring financial transaction infrastructure. |
+| [Apache Fineract](https://github.com/apache/fineract) | [![Stars](https://img.shields.io/github/stars/apache/fineract?style=social&color=white)](https://github.com/apache/fineract/stargazers) | 🏦 Institutional-grade multi-currency double-entry general ledger. |
+| [Formance Ledger](https://github.com/formancehq/ledger) | [![Stars](https://img.shields.io/github/stars/formancehq/ledger?style=social&color=white)](https://github.com/formancehq/ledger/stargazers) | 📖 Programmable cloud-native financial ledger designed for complex capital activity tracking. |
+| [Hemrock Reporting](https://github.com/tdavidson/reporting) | [![Stars](https://img.shields.io/github/stars/tdavidson/reporting?style=social&color=white)](https://github.com/tdavidson/reporting/stargazers) | 🏷️ Fund accounting module specifically mapping LP capital accounts and SPVs. |
 
 ---
 
 # 📈 Open-Source Portfolio Reporting
 
-| Project                                                      | Focus                           |
-| ------------------------------------------------------------ | ------------------------------- |
-| [Hemrock Reporting](https://github.com/tdavidson/reporting)  | Fund and portfolio reporting    |
-| [Metabase](https://github.com/metabase/metabase)             | Business intelligence           |
-| [Apache Superset](https://github.com/apache/superset)        | BI / analytics                  |
-| [Grafana](https://github.com/grafana/grafana)                | Dashboards and monitoring       |
-| [Redash](https://github.com/getredash/redash)                | SQL analytics                   |
-| [Evidence](https://github.com/evidence-dev/evidence)         | Code-based data reporting       |
-| [Lightdash](https://github.com/lightdash/lightdash)          | Semantic-layer BI               |
-| [Cube](https://github.com/cube-js/cube)                      | Analytics infrastructure        |
-| [Portfolio Performance](https://github.com/buchen/portfolio) | Investment performance analysis |
+Engaging LP portal experiences require interactive financial reporting and metrics calculation (NAV, TVPI, DPI, RVPI, IRR, MOIC):
 
-Typical LP metrics include:
-
-```text
-Committed Capital
-Called Capital
-Paid-In Capital
-Unfunded Commitment
-Distributions
-NAV
-TVPI
-DPI
-RVPI
-IRR
-MOIC
-Investment Cost
-Fair Value
-Exposure
-Portfolio Performance
-```
+| Project | Stars | Primary Role & Description |
+| :--- | :--- | :--- |
+| [Grafana](https://github.com/grafana/grafana) | [![Stars](https://img.shields.io/github/stars/grafana/grafana?style=social&color=white)](https://github.com/grafana/grafana/stargazers) | 📊 Interactive metric dashboards and data visualization. |
+| [Apache Superset](https://github.com/apache/superset) | [![Stars](https://img.shields.io/github/stars/apache/superset?style=social&color=white)](https://github.com/apache/superset/stargazers) | 🚀 Enterprise-grade business intelligence and SQL data exploration engine. |
+| [Metabase](https://github.com/metabase/metabase) | [![Stars](https://img.shields.io/github/stars/metabase/metabase?style=social&color=white)](https://github.com/metabase/metabase/stargazers) | 🔍 User-friendly self-service business analytics and LP dashboard embedding. |
+| [Redash](https://github.com/getredash/redash) | [![Stars](https://img.shields.io/github/stars/getredash/redash?style=social&color=white)](https://github.com/getredash/redash/stargazers) | ⚡ Collaborative SQL queries, chart visualization, and dashboard sharing. |
+| [Cube](https://github.com/cube-js/cube) | [![Stars](https://img.shields.io/github/stars/cube-js/cube?style=social&color=white)](https://github.com/cube-js/cube/stargazers) | 🧊 Universal semantic layer and analytical API for financial data. |
+| [Evidence](https://github.com/evidence-dev/evidence) | [![Stars](https://img.shields.io/github/stars/evidence-dev/evidence?style=social&color=white)](https://github.com/evidence-dev/evidence/stargazers) | 📝 Markdown and SQL-based code-first data reporting tool for quarterly LP letters. |
+| [Lightdash](https://github.com/lightdash/lightdash) | [![Stars](https://img.shields.io/github/stars/lightdash/lightdash?style=social&color=white)](https://github.com/lightdash/lightdash/stargazers) | ⚡ dbt-native business intelligence platform for governed financial metrics. |
+| [Portfolio Performance](https://github.com/buchen/portfolio) | [![Stars](https://img.shields.io/github/stars/buchen/portfolio?style=social&color=white)](https://github.com/buchen/portfolio/stargazers) | 📈 Financial calculation engine for IRR, TWR, and portfolio performance analysis. |
+| [Hemrock Reporting](https://github.com/tdavidson/reporting) | [![Stars](https://img.shields.io/github/stars/tdavidson/reporting?style=social&color=white)](https://github.com/tdavidson/reporting/stargazers) | 📊 Dedicated PE/VC portfolio KPI collector and LP performance generator. |
 
 ---
 
 # 💼 Open-Source Investor CRM
 
-An LP portal is often only one component of investor-relations infrastructure.
+Manage Limited Partner relationships, commitment pipelines, fundraising calls, and LP contact directories sorted by GitHub stars:
 
-```text
-Investor CRM
-     │
-     ├── LP Profiles
-     ├── Relationships
-     ├── Commitments
-     ├── Fund Interests
-     ├── Communications
-     ├── Fundraising
-     ├── Meetings
-     └── Documents
-```
-
-Useful open-source CRM platforms include:
-
-| Project                                                     | Description                     |
-| ----------------------------------------------------------- | ------------------------------- |
-| [Twenty](https://github.com/twentyhq/twenty)                | Modern open-source CRM          |
-| [EspoCRM](https://github.com/espocrm/espocrm)               | Open-source CRM                 |
-| [SuiteCRM](https://github.com/salesagility/SuiteCRM)        | Enterprise CRM                  |
-| [Odoo Community](https://github.com/odoo/odoo)              | CRM + ERP                       |
-| [ERPNext](https://github.com/frappe/erpnext)                | CRM + ERP                       |
-| [Frappe CRM](https://github.com/frappe/crm)                 | Open-source CRM                 |
-| [Hemrock Reporting](https://github.com/tdavidson/reporting) | Fund-manager CRM / LP workflows |
+| Project | Stars | Primary Role & Description |
+| :--- | :--- | :--- |
+| [Twenty](https://github.com/twentyhq/twenty) | [![Stars](https://img.shields.io/github/stars/twentyhq/twenty?style=social&color=white)](https://github.com/twentyhq/twenty/stargazers) | ⚡ Modern open-source CRM with sleek UI, custom objects, and API integrations. |
+| [Odoo Community](https://github.com/odoo/odoo) | [![Stars](https://img.shields.io/github/stars/odoo/odoo?style=social&color=white)](https://github.com/odoo/odoo/stargazers) | 🏢 Full CRM suite integrated with double-entry fund accounting. |
+| [ERPNext](https://github.com/frappe/erpnext) | [![Stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers) | 📦 Investor relationship management integrated with financial ledgers. |
+| [SuiteCRM](https://github.com/salesagility/SuiteCRM) | [![Stars](https://img.shields.io/github/stars/salesagility/SuiteCRM?style=social&color=white)](https://github.com/salesagility/SuiteCRM/stargazers) | 👔 Enterprise-grade open-source CRM platform for fundraising pipelines. |
+| [Frappe CRM](https://github.com/frappe/crm) | [![Stars](https://img.shields.io/github/stars/frappe/crm?style=social&color=white)](https://github.com/frappe/crm/stargazers) | 🚀 Modern, fast open-source CRM built on the Frappe framework. |
+| [EspoCRM](https://github.com/espocrm/espocrm) | [![Stars](https://img.shields.io/github/stars/espocrm/espocrm?style=social&color=white)](https://github.com/espocrm/espocrm/stargazers) | 🌐 Lightweight, customizable web CRM tailored for financial and LP relationships. |
+| [Hemrock Reporting](https://github.com/tdavidson/reporting) | [![Stars](https://img.shields.io/github/stars/tdavidson/reporting?style=social&color=white)](https://github.com/tdavidson/reporting/stargazers) | 📇 Specialized investor contacts and commitment tracking system. |
 
 ---
 
 # 📁 Open-Source Data Rooms & Document Management
 
-LP portals need secure document delivery for:
+Secure distribution of financial statements, K-1s, pitch decks, capital call notices, and side letters:
 
-* Quarterly reports
-* Capital-account statements
-* K-1s
-* Financial statements
-* Capital-call notices
-* Distribution notices
-* Subscription documents
-* Side letters
-* Fund agreements
-* Tax documents
-* Investor communications
-
-Useful open-source building blocks:
-
-| Project                                                         | Role                             |
-| --------------------------------------------------------------- | -------------------------------- |
-| [Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) | Document management              |
-| [Nextcloud](https://github.com/nextcloud/server)                | File collaboration               |
-| [OpenKM](https://github.com/openkm/document-management-system)  | Document management              |
-| [Mayan EDMS](https://github.com/mayan-edms/Mayan-EDMS)          | Enterprise document management   |
-| [MinIO](https://github.com/minio/minio)                         | Object storage                   |
-| [Seafile](https://github.com/haiwen/seafile)                    | File sync and sharing            |
-| [Immich](https://github.com/immich-app/immich)                  | Asset management                 |
-| [Documenso](https://github.com/documenso/documenso)             | Open-source e-signatures         |
-| [OpenSign](https://github.com/opensignlabs/opensign)            | Open-source e-signature platform |
-
-A practical LP portal can use object storage such as MinIO together with a document-management layer and application-level authorization.
+| Project | Stars | Primary Role & Description |
+| :--- | :--- | :--- |
+| [Immich](https://github.com/immich-app/immich) | [![Stars](https://img.shields.io/github/stars/immich-app/immich?style=social&color=white)](https://github.com/immich-app/immich/stargazers) | 📸 High-performance digital asset and file management platform. |
+| [MinIO](https://github.com/minio/minio) | [![Stars](https://img.shields.io/github/stars/minio/minio?style=social&color=white)](https://github.com/minio/minio/stargazers) | 🪣 High-performance, S3-compatible enterprise object storage for LP documents. |
+| [Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) | [![Stars](https://img.shields.io/github/stars/paperless-ngx/paperless-ngx?style=social&color=white)](https://github.com/paperless-ngx/paperless-ngx/stargazers) | 📄 Document indexing, OCR, tag-based access, and PDF archival engine. |
+| [Nextcloud](https://github.com/nextcloud/server) | [![Stars](https://img.shields.io/github/stars/nextcloud/server?style=social&color=white)](https://github.com/nextcloud/server/stargazers) | ☁️ Enterprise self-hosted collaboration, file storage, and data room platform. |
+| [Seafile](https://github.com/haiwen/seafile) | [![Stars](https://img.shields.io/github/stars/haiwen/seafile?style=social&color=white)](https://github.com/haiwen/seafile/stargazers) | 🔒 High-performance file encryption, synchronization, and secure document vaults. |
+| [Documenso](https://github.com/documenso/documenso) | [![Stars](https://img.shields.io/github/stars/documenso/documenso?style=social&color=white)](https://github.com/documenso/documenso/stargazers) | ✍️ Open-source e-signature signing infrastructure for LP subscription agreements. |
+| [OpenSign](https://github.com/opensignlabs/opensign) | [![Stars](https://img.shields.io/github/stars/opensignlabs/opensign?style=social&color=white)](https://github.com/opensignlabs/opensign/stargazers) | 🖋️ PDF electronic signature solution and agreement workflow engine. |
+| [OpenKM](https://github.com/openkm/document-management-system) | [![Stars](https://img.shields.io/github/stars/openkm/document-management-system?style=social&color=white)](https://github.com/openkm/document-management-system/stargazers) | 📁 Enterprise document management system with granular metadata & access control. |
+| [Mayan EDMS](https://github.com/mayan-edms/Mayan-EDMS) | [![Stars](https://img.shields.io/github/stars/mayan-edms/Mayan-EDMS?style=social&color=white)](https://github.com/mayan-edms/Mayan-EDMS/stargazers) | 🗄️ Enterprise document management with strict electronic audit trails. |
 
 ---
 
 # 🔐 Open-Source Identity & Access Management
 
-LP portals require strong investor-level authorization.
+Institutional security requires multi-factor authentication (MFA), Single Sign-On (SSO), and granular Row-Level Security (RLS) for LPs:
 
-The fundamental security model is:
-
-```text
-                     LP LOGIN
-                        │
-                        ▼
-                    Identity
-                        │
-                        ▼
-                 Authentication
-                        │
-                        ▼
-                  Authorization
-                        │
-              ┌─────────┴─────────┐
-              ▼                   ▼
-           Fund A              Fund B
-              │                   │
-              ▼                   ▼
-           Investor 1          Investor 1
-```
-
-Useful projects:
-
-| Project                                                       | Role                           |
-| ------------------------------------------------------------- | ------------------------------ |
-| [Keycloak](https://github.com/keycloak/keycloak)              | Identity and access management |
-| [Authentik](https://github.com/goauthentik/authentik)         | Identity provider              |
-| [Zitadel](https://github.com/zitadel/zitadel)                 | Identity management            |
-| [ORY Kratos](https://github.com/ory/kratos)                   | Identity management            |
-| [ORY Hydra](https://github.com/ory/hydra)                     | OAuth2 / OpenID Connect        |
-| [Open Policy Agent](https://github.com/open-policy-agent/opa) | Policy engine                  |
-| [Casbin](https://github.com/casbin/casbin)                    | Authorization framework        |
-
-For LP portals, **row-level and object-level authorization** is especially important:
-
-```text
-LP A
- │
- ├── Fund I      ✅
- ├── Fund II     ❌
- ├── Fund III    ✅
- └── Fund IV     ❌
-```
+| Project | Stars | Primary Role & Description |
+| :--- | :--- | :--- |
+| [Keycloak](https://github.com/keycloak/keycloak) | [![Stars](https://img.shields.io/github/stars/keycloak/keycloak?style=social&color=white)](https://github.com/keycloak/keycloak/stargazers) | 🔑 Enterprise IAM supporting OAuth2, OIDC, SAML, SSO, and MFA for investor portals. |
+| [Authentik](https://github.com/goauthentik/authentik) | [![Stars](https://img.shields.io/github/stars/goauthentik/authentik?style=social&color=white)](https://github.com/goauthentik/authentik/stargazers) | 🛡️ Versatile open-source identity provider with built-in flow builders and proxy auth. |
+| [Casbin](https://github.com/casbin/casbin) | [![Stars](https://img.shields.io/github/stars/casbin/casbin?style=social&color=white)](https://github.com/casbin/casbin/stargazers) | ⚙️ Authorization library supporting ACL, RBAC, and ABAC control models. |
+| [ORY Hydra](https://github.com/ory/hydra) | [![Stars](https://img.shields.io/github/stars/ory/hydra?style=social&color=white)](https://github.com/ory/hydra/stargazers) | 🐉 Open-source OAuth 2.0 and OpenID Connect server for secure API tokens. |
+| [Zitadel](https://github.com/zitadel/zitadel) | [![Stars](https://img.shields.io/github/stars/zitadel/zitadel?style=social&color=white)](https://github.com/zitadel/zitadel/stargazers) | 🏰 Cloud-native identity platform optimized for multi-tenant LP access models. |
+| [ORY Kratos](https://github.com/ory/kratos) | [![Stars](https://img.shields.io/github/stars/ory/kratos?style=social&color=white)](https://github.com/ory/kratos/stargazers) | 👤 Headless user management and identity engine. |
+| [Open Policy Agent (OPA)](https://github.com/open-policy-agent/opa) | [![Stars](https://img.shields.io/github/stars/open-policy-agent/opa?style=social&color=white)](https://github.com/open-policy-agent/opa/stargazers) | 📜 Policy engine for fine-grained authorization rules across financial datasets. |
 
 ---
 
-# 📊 Open-Source Business Intelligence
+# 📊 Open-Source Business Intelligence & Analytics
 
-A modern LP portal can expose interactive dashboards instead of relying exclusively on PDFs.
-
-| Project                                               | Strength                       |
-| ----------------------------------------------------- | ------------------------------ |
-| [Metabase](https://github.com/metabase/metabase)      | Easy analytics                 |
-| [Apache Superset](https://github.com/apache/superset) | Enterprise BI                  |
-| [Grafana](https://github.com/grafana/grafana)         | Dashboards                     |
-| [Redash](https://github.com/getredash/redash)         | SQL analytics                  |
-| [Lightdash](https://github.com/lightdash/lightdash)   | Semantic BI                    |
-| [Evidence](https://github.com/evidence-dev/evidence)  | Developer-oriented reporting   |
-| [Cube](https://github.com/cube-js/cube)               | Analytics API / semantic layer |
-
-Example:
-
-```text
-                   FUND DATABASE
-                         │
-                         ▼
-                   Data Warehouse
-                         │
-                         ▼
-                 Semantic / Metrics Layer
-                         │
-              ┌──────────┼──────────┐
-              ▼          ▼          ▼
-          Metabase    Superset    Grafana
-              │          │          │
-              └──────────┼──────────┘
-                         ▼
-                      LP Portal
-```
+| Project | Stars | Primary Role & Description |
+| :--- | :--- | :--- |
+| [Grafana](https://github.com/grafana/grafana) | [![Stars](https://img.shields.io/github/stars/grafana/grafana?style=social&color=white)](https://github.com/grafana/grafana/stargazers) | 📈 Dashboard metrics and interactive chart generation. |
+| [Apache Superset](https://github.com/apache/superset) | [![Stars](https://img.shields.io/github/stars/apache/superset?style=social&color=white)](https://github.com/apache/superset/stargazers) | 📊 Modern data exploration and business intelligence suite. |
+| [Metabase](https://github.com/metabase/metabase) | [![Stars](https://img.shields.io/github/stars/metabase/metabase?style=social&color=white)](https://github.com/metabase/metabase/stargazers) | 🔍 Self-service analytics engine ideal for embedding in Next.js/React portals. |
+| [PostHog](https://github.com/posthog/posthog) | [![Stars](https://img.shields.io/github/stars/posthog/posthog?style=social&color=white)](https://github.com/posthog/posthog/stargazers) | 🦔 Self-hosted product analytics and LP portal usage tracking. |
+| [Plausible Analytics](https://github.com/plausible/analytics) | [![Stars](https://img.shields.io/github/stars/plausible/analytics?style=social&color=white)](https://github.com/plausible/analytics/stargazers) | 🛡️ Lightweight, privacy-friendly web analytics engine. |
+| [Redash](https://github.com/getredash/redash) | [![Stars](https://img.shields.io/github/stars/getredash/redash?style=social&color=white)](https://github.com/getredash/redash/stargazers) | 💻 SQL-driven dashboarding and business intelligence engine. |
+| [Matomo](https://github.com/matomo-org/matomo) | [![Stars](https://img.shields.io/github/stars/matomo-org/matomo?style=social&color=white)](https://github.com/matomo-org/matomo/stargazers) | 🌐 Ethical, open-source web analytics protecting LP visitor privacy. |
+| [Cube](https://github.com/cube-js/cube) | [![Stars](https://img.shields.io/github/stars/cube-js/cube?style=social&color=white)](https://github.com/cube-js/cube/stargazers) | 🧊 Universal semantic layer for governing metrics calculation across data sources. |
+| [Evidence](https://github.com/evidence-dev/evidence) | [![Stars](https://img.shields.io/github/stars/evidence-dev/evidence?style=social&color=white)](https://github.com/evidence-dev/evidence/stargazers) | 📑 Markdown/SQL publishing engine for quarterly LP investor letters. |
+| [Lightdash](https://github.com/lightdash/lightdash) | [![Stars](https://img.shields.io/github/stars/lightdash/lightdash?style=social&color=white)](https://github.com/lightdash/lightdash/stargazers) | 💡 BI platform built directly on top of dbt models. |
 
 ---
 
 # 📑 Open-Source Document & Reporting Infrastructure
 
-| Technology                                                      | Role                       |
-| --------------------------------------------------------------- | -------------------------- |
-| [WeasyPrint](https://github.com/Kozea/WeasyPrint)               | HTML → PDF                 |
-| [Pandoc](https://github.com/jgm/pandoc)                         | Document conversion        |
-| [LibreOffice](https://github.com/LibreOffice/core)              | Office document generation |
-| [Quarto](https://github.com/quarto-dev/quarto-cli)              | Reproducible reports       |
-| [JasperReports](https://github.com/TIBCOSoftware/jasperreports) | Enterprise reporting       |
-| [ReportLab](https://github.com/ActiveState/reportlab)           | PDF generation             |
-| [Docling](https://github.com/docling-project/docling)           | Document parsing           |
-| [Gotenberg](https://github.com/gotenberg/gotenberg)             | Document conversion        |
+Automated generation of PDF reports, quarterly investor letters, capital call notices, and K-1 tax forms:
 
-A fund reporting system can generate:
+| Project | Stars | Primary Role & Description |
+| :--- | :--- | :--- |
+| [Docling](https://github.com/docling-project/docling) | [![Stars](https://img.shields.io/github/stars/docling-project/docling?style=social&color=white)](https://github.com/docling-project/docling/stargazers) | 🦆 AI-powered document parsing and conversion for fund statements. |
+| [Pandoc](https://github.com/jgm/pandoc) | [![Stars](https://img.shields.io/github/stars/jgm/pandoc?style=social&color=white)](https://github.com/jgm/pandoc/stargazers) | 📄 Universal document converter for reporting output generation. |
+| [Gotenberg](https://github.com/gotenberg/gotenberg) | [![Stars](https://img.shields.io/github/stars/gotenberg/gotenberg?style=social&color=white)](https://github.com/gotenberg/gotenberg/stargazers) | 🐳 Docker-powered API for converting HTML/Markdown templates into PDFs. |
+| [WeasyPrint](https://github.com/Kozea/WeasyPrint) | [![Stars](https://img.shields.io/github/stars/Kozea/WeasyPrint?style=social&color=white)](https://github.com/Kozea/WeasyPrint/stargazers) | 🖨️ Visual HTML & CSS to PDF engine tailored for branded investor letters. |
+| [Quarto](https://github.com/quarto-dev/quarto-cli) | [![Stars](https://img.shields.io/github/stars/quarto-dev/quarto-cli?style=social&color=white)](https://github.com/quarto-dev/quarto-cli/stargazers) | 📜 Technical publishing system for scientific and financial reports. |
+| [LibreOffice Core](https://github.com/LibreOffice/core) | [![Stars](https://img.shields.io/github/stars/LibreOffice/core?style=social&color=white)](https://github.com/LibreOffice/core/stargazers) | 📊 Headless document transformation and spreadsheet calculations. |
+| [JasperReports](https://github.com/TIBCOSoftware/jasperreports) | [![Stars](https://img.shields.io/github/stars/TIBCOSoftware/jasperreports?style=social&color=white)](https://github.com/TIBCOSoftware/jasperreports/stargazers) | 💼 Java-based enterprise reporting engine for financial statements. |
+| [ReportLab](https://github.com/ActiveState/reportlab) | [![Stars](https://img.shields.io/github/stars/ActiveState/reportlab?style=social&color=white)](https://github.com/ActiveState/reportlab/stargazers) | 🐍 Python PDF creation library for dynamic statement generation. |
 
-```text
-Fund Data
-   │
-   ▼
-Reporting Templates
-   │
-   ├── Quarterly Report
-   ├── Capital Account Statement
-   ├── Capital Call Notice
-   ├── Distribution Notice
-   └── Investor Letter
-   │
-   ▼
-PDF / HTML
-   │
-   ▼
-Secure LP Portal
-```
+---
+
+# ⚡ Open-Source Backend, Database & Workflow Infrastructure
+
+Essential backend databases, API gateways, app platforms, and workflow automation for building custom LP portals:
+
+| Project | Stars | Primary Role & Description |
+| :--- | :--- | :--- |
+| [n8n](https://github.com/n8n-io/n8n) | [![Stars](https://img.shields.io/github/stars/n8n-io/n8n?style=social&color=white)](https://github.com/n8n-io/n8n/stargazers) | ⚡ Workflow automation engine for capital call notifications, email delivery, and CRM sync. |
+| [Supabase](https://github.com/supabase/supabase) | [![Stars](https://img.shields.io/github/stars/supabase/supabase?style=social&color=white)](https://github.com/supabase/supabase/stargazers) | ⚡ Firebase alternative offering PostgreSQL, authentication, row-level security, and auto-APIs. |
+| [Hoppscotch](https://github.com/hoppscotch/hoppscotch) | [![Stars](https://img.shields.io/github/stars/hoppscotch/hoppscotch?style=social&color=white)](https://github.com/hoppscotch/hoppscotch/stargazers) | 👽 API development suite for testing fund accounting endpoints and webhooks. |
+| [PocketBase](https://github.com/pocketbase/pocketbase) | [![Stars](https://img.shields.io/github/stars/pocketbase/pocketbase?style=social&color=white)](https://github.com/pocketbase/pocketbase/stargazers) | ⚡ Single-file Go backend with SQLite, embedded auth, and real-time database capabilities. |
+| [Appwrite](https://github.com/appwrite/appwrite) | [![Stars](https://img.shields.io/github/stars/appwrite/appwrite?style=social&color=white)](https://github.com/appwrite/appwrite/stargazers) | 🚀 End-to-end backend server for Web & Mobile apps with auth, storage, and functions. |
+| [Activepieces](https://github.com/activepieces/activepieces) | [![Stars](https://img.shields.io/github/stars/activepieces/activepieces?style=social&color=white)](https://github.com/activepieces/activepieces/stargazers) | 🧩 No-code business automation tool for syncing LP contacts and document notifications. |
 
 ---
 
 # 🤖 Open-Source AI for LP Reporting
 
-AI can automate several LP reporting workflows:
+AI engines for parsing pitch decks, extracting financial metrics from PDFs, and powering natural language LP Q&A assistants:
 
-```text
-Fund Documents
-      │
-      ▼
-Document Parsing
-      │
-      ▼
-Data Extraction
-      │
-      ▼
-Validation
-      │
-      ▼
-Fund Database
-      │
-      ▼
-AI Reporting
-      │
-      ├── Investor Letter
-      ├── Quarterly Summary
-      ├── Portfolio Commentary
-      ├── LP Q&A
-      └── Data Analysis
-```
-
-Useful open-source components:
-
-| Project                                                         | Role                        |
-| --------------------------------------------------------------- | --------------------------- |
-| [Docling](https://github.com/docling-project/docling)           | Document parsing            |
-| [Unstructured](https://github.com/Unstructured-IO/unstructured) | Document processing         |
-| [OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF)                | OCR                         |
-| [Tesseract](https://github.com/tesseract-ocr/tesseract)         | OCR                         |
-| [LlamaIndex](https://github.com/run-llama/llama_index)          | RAG / data orchestration    |
-| [Haystack](https://github.com/deepset-ai/haystack)              | AI orchestration            |
-| [vLLM](https://github.com/vllm-project/vllm)                    | LLM inference               |
-| [Ollama](https://github.com/ollama/ollama)                      | Local LLM runtime           |
-| [Qdrant](https://github.com/qdrant/qdrant)                      | Vector database             |
-| [pgvector](https://github.com/pgvector/pgvector)                | Vector search in PostgreSQL |
+| Project | Stars | Primary Role & Description |
+| :--- | :--- | :--- |
+| [Ollama](https://github.com/ollama/ollama) | [![Stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers) | 🦙 Local runtime for serving open-weights LLMs (Llama 3, DeepSeek) securely in-house. |
+| [vLLM](https://github.com/vllm-project/vllm) | [![Stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social&color=white)](https://github.com/vllm-project/vllm/stargazers) | ⚡ High-throughput, low-latency LLM serving engine. |
+| [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) | [![Stars](https://img.shields.io/github/stars/tesseract-ocr/tesseract?style=social&color=white)](https://github.com/tesseract-ocr/tesseract/stargazers) | 👁️ Open-source optical character recognition engine. |
+| [Docling](https://github.com/docling-project/docling) | [![Stars](https://img.shields.io/github/stars/docling-project/docling?style=social&color=white)](https://github.com/docling-project/docling/stargazers) | 🦆 Advanced document reader converting complex financial PDFs into structured JSON/Markdown. |
+| [LlamaIndex](https://github.com/run-llama/llama_index) | [![Stars](https://img.shields.io/github/stars/run-llama/llama_index?style=social&color=white)](https://github.com/run-llama/llama_index/stargazers) | 🦙 RAG data framework connecting custom financial documents to LLMs. |
+| [Qdrant](https://github.com/qdrant/qdrant) | [![Stars](https://img.shields.io/github/stars/qdrant/qdrant?style=social&color=white)](https://github.com/qdrant/qdrant/stargazers) | 🔍 Vector search engine for querying fund documents and LP communications. |
+| [OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) | [![Stars](https://img.shields.io/github/stars/ocrmypdf/OCRmyPDF?style=social&color=white)](https://github.com/ocrmypdf/OCRmyPDF/stargazers) | 📄 Adds searchable text layers to scanned LP documents and tax forms. |
+| [Haystack](https://github.com/deepset-ai/haystack) | [![Stars](https://img.shields.io/github/stars/deepset-ai/haystack?style=social&color=white)](https://github.com/deepset-ai/haystack/stargazers) | 🌾 Orchestration framework for building enterprise RAG pipelines. |
+| [pgvector](https://github.com/pgvector/pgvector) | [![Stars](https://img.shields.io/github/stars/pgvector/pgvector?style=social&color=white)](https://github.com/pgvector/pgvector/stargazers) | 🐘 Open-source vector similarity search extension for PostgreSQL. |
+| [Unstructured](https://github.com/Unstructured-IO/unstructured) | [![Stars](https://img.shields.io/github/stars/Unstructured-IO/unstructured?style=social&color=white)](https://github.com/Unstructured-IO/unstructured/stargazers) | 🧩 Ingestion and preprocessing library for unstructured financial documents. |
 
 ---
 
 # 🧩 Commercial Platform → Open-Source Equivalent
 
-| Commercial Platform    | Open-Source Equivalent / Building Blocks                      |
-| ---------------------- | ------------------------------------------------------------- |
-| **Juniper Square**     | Hemrock Reporting + Fineract/Formance + Keycloak + MinIO      |
-| **Allvue**             | Fineract + Formance + Metabase/Superset + Keycloak            |
-| **Dynamo Software**    | Twenty/Frappe CRM + Formance + Superset + document management |
-| **InvestorFlow**       | Twenty + Frappe CRM + Hemrock + Metabase                      |
-| **Fundwave**           | Fineract + Formance + Hemrock Reporting                       |
-| **Carta**              | Hemrock + Formance + Fineract + CRM + document management     |
-| **Visible.vc**         | Hemrock Reporting + Metabase + Superset                       |
-| **eFront**             | Formance + Fineract + Apache Superset + PostgreSQL            |
-| **Backstop Solutions** | Twenty / EspoCRM + Superset + Formance                        |
-| **SEI Archway**        | Fineract + Formance + ERPNext + reporting stack               |
-| **LP Portal**          | Hemrock Reporting + Next.js + Keycloak + MinIO                |
-| **Investor Reporting** | Hemrock + Metabase / Superset                                 |
-| **Investor CRM**       | Twenty / EspoCRM / Frappe CRM                                 |
-| **Fund Accounting**    | Formance + Fineract + ERPNext                                 |
-| **Data Room**          | Nextcloud + MinIO + Paperless-ngx                             |
-| **LP Authentication**  | Keycloak / Authentik / Zitadel                                |
-| **AI LP Analyst**      | LlamaIndex + Qdrant + vLLM / Ollama                           |
+| Commercial SaaS Platform | Open-Source Equivalent Composable Stack |
+| :--- | :--- |
+| **Juniper Square** | **Hemrock Reporting** + **Formance Ledger** + **Keycloak** + **MinIO** + **Documenso** |
+| **Carta Fund Admin** | **Hemrock Reporting** + **Apache Fineract** + **Formance** + **Twenty CRM** |
+| **Allvue Systems** | **Apache Fineract** + **Formance** + **Apache Superset** + **Keycloak** |
+| **Dynamo Software** | **Twenty CRM** + **Formance** + **Metabase** + **Paperless-ngx** |
+| **InvestorFlow** | **Twenty CRM** + **Hemrock Reporting** + **Metabase** |
+| **Fundwave** | **Hemrock Reporting** + **Formance Ledger** + **Gotenberg** |
+| **Visible.vc** | **Hemrock Reporting** + **Metabase** + **Evidence** |
+| **eFront** | **Formance** + **Apache Fineract** + **Apache Superset** + **PostgreSQL** |
+| **Backstop Solutions** | **Twenty CRM** + **Apache Superset** + **Formance** |
+| **SEI Archway** | **Apache Fineract** + **ERPNext** + **Cube** + **Gotenberg** |
 
 ---
 
 # 🏗️ LP Portal Architecture
 
-A typical institutional LP portal looks like:
-
 ```mermaid
 flowchart TD
+    A[Limited Partner / Family Office] --> B[Secure Frontend Portal Next.js / React]
 
-    A[Limited Partner] --> B[Secure Investor Portal]
+    B --> C[Authentication & OAuth2 Keycloak / Authentik]
+    B --> D[LP Dashboard NAV, TVPI, DPI]
+    B --> E[Document Vault VDR & K-1s]
+    B --> F[Capital Activity Calls & Distributions]
+    B --> G[Portfolio Performance Interactive Charts]
+    B --> H[Investor Communications & CRM]
 
-    B --> C[Authentication]
-    B --> D[Investor Dashboard]
-    B --> E[Documents]
-    B --> F[Capital Activity]
-    B --> G[Performance]
-    B --> H[Communications]
+    C --> I[Identity Provider]
+    D --> J[PostgreSQL / Supabase]
+    E --> K[MinIO Object Storage / Seafile]
+    F --> L[Double-Entry Fund Ledger Formance / Fineract]
+    G --> M[Semantic Analytics Cube / Superset]
+    H --> N[Investor CRM Twenty / EspoCRM]
 
-    C --> I[Identity / Access Management]
-
-    D --> J[Fund Data]
-    E --> K[Document Store]
-    F --> L[Fund Accounting]
-    G --> M[Portfolio Analytics]
-    H --> N[Investor CRM]
-
-    L --> O[Financial Ledger]
-    M --> P[Portfolio Database]
-
-    O --> Q[Reporting Engine]
-    P --> Q
-
-    Q --> B
+    L --> O[Reconciliation & Financial Truth]
+    M --> O
+    O --> B
 ```
 
 ---
 
-# 🔄 Open-Source LP Portal Architecture
+# 💖 Support & Sponsorship
 
-```text id="l2wz1p"
-                         LIMITED PARTNER
-                                │
-                                ▼
-                         ┌─────────────┐
-                         │ LP PORTAL   │
-                         │ Next.js     │
-                         └──────┬──────┘
-                                │
-                         ┌──────▼──────┐
-                         │  Keycloak   │
-                         │ Auth / RBAC  │
-                         └──────┬──────┘
-                                │
-          ┌─────────────────────┼──────────────────────┐
-          │                     │                      │
-          ▼                     ▼                      ▼
-      Dashboard             Documents             Reporting
-          │                     │                      │
-          ▼                     ▼                      ▼
-      PostgreSQL              MinIO             Metabase/Superset
-          │                     │                      │
-          └─────────────────────┼──────────────────────┘
-                                ▼
-                         Fund Data Layer
-                                │
-                  ┌─────────────┼─────────────┐
-                  ▼             ▼             ▼
-              Fineract       Formance      Hemrock
-                  │             │             │
-                  └─────────────┼─────────────┘
-                                ▼
-                         Reconciliation
-```
+Thank you for exploring this curated repository! If this guide helped you evaluate or build LP portal technology for private equity and venture capital:
 
----
-
-# 📊 Investor Reporting Architecture
-
-```text id="2r1hkt"
-                   FUND ADMIN / ACCOUNTING
-                            │
-                            ▼
-                      Source Data
-                            │
-                            ▼
-                  Data Normalization
-                            │
-                            ▼
-                     Fund Database
-                            │
-          ┌─────────────────┼─────────────────┐
-          │                 │                 │
-          ▼                 ▼                 ▼
-      Capital Calls     Distributions       NAV
-          │                 │                 │
-          └─────────────────┼─────────────────┘
-                            ▼
-                    Investor Calculations
-                            │
-                 ┌──────────┼──────────┐
-                 ▼          ▼          ▼
-               IRR        TVPI        DPI
-                 │          │          │
-                 └──────────┼──────────┘
-                            ▼
-                    Reporting Engine
-                            │
-                 ┌──────────┼──────────┐
-                 ▼          ▼          ▼
-               PDF        HTML       API
-                 │          │          │
-                 └──────────┼──────────┘
-                            ▼
-                        LP PORTAL
-```
-
----
-
-# 🔐 LP Data Security Architecture
-
-LP portals contain extremely sensitive financial information.
-
-A secure architecture should enforce authorization at multiple layers:
-
-```text
-                         LP USER
-                            │
-                            ▼
-                     Authentication
-                            │
-                            ▼
-                       MFA / SSO
-                            │
-                            ▼
-                     Authorization
-                            │
-                            ▼
-                     Organization
-                            │
-                            ▼
-                        Investor
-                            │
-                            ▼
-                         Fund
-                            │
-                            ▼
-                       Document
-                            │
-                            ▼
-                      Audit Logging
-```
-
-Example access model:
-
-```text
-Investor: alice@example.com
-
-Fund I
- ├── Capital Account       ✅
- ├── Quarterly Report      ✅
- ├── K-1                   ✅
- └── Side Letter           ✅
-
-Fund II
- ├── Capital Account       ❌
- ├── Quarterly Report      ❌
- └── K-1                   ❌
-
-Fund III
- ├── Capital Account       ✅
- └── Quarterly Report      ✅
-```
-
-Recommended infrastructure:
-
-```text
-Keycloak
-+
-PostgreSQL Row-Level Security
-+
-Object-Level Authorization
-+
-MinIO / S3
-+
-Signed URLs
-+
-Audit Logs
-+
-Encryption
-+
-MFA
-```
-
----
-
-# 📬 LP Communication Architecture
-
-```text
-                      FUND MANAGER
-                           │
-                           ▼
-                   Investor CRM
-                           │
-             ┌─────────────┼─────────────┐
-             ▼             ▼             ▼
-         Announcements   Reports      Documents
-             │             │             │
-             └─────────────┼─────────────┘
-                           ▼
-                     Notification
-                           │
-                  ┌────────┼────────┐
-                  ▼        ▼        ▼
-                Email     Portal   API
-```
-
-Useful open-source infrastructure:
-
-* [Listmonk](https://github.com/knadh/listmonk)
-* [Novu](https://github.com/novuhq/novu)
-* [Postal](https://github.com/postalserver/postal)
-* [Mautic](https://github.com/mautic/mautic)
-
----
-
-# 📑 LP Document Delivery
-
-A production system can separate **document storage** from **document authorization**:
-
-```text
-                    LP
-                    │
-                    ▼
-               Authorization
-                    │
-                    ▼
-              Document Service
-                    │
-                    ▼
-                 MinIO
-                    │
-                    ▼
-              Signed Download
-                    │
-                    ▼
-                  PDF
-```
-
-This prevents a direct object-storage URL from becoming the source of authorization truth.
-
----
-
-# 📈 LP Performance Dashboard
-
-A modern LP dashboard can expose:
-
-```text
-┌────────────────────────────────────────────┐
-│                FUND III                    │
-├────────────────────────────────────────────┤
-│ Commitment       $10.0M                    │
-│ Called           $7.5M                     │
-│ Unfunded         $2.5M                     │
-│ NAV              $11.8M                    │
-│ Distributions    $4.2M                     │
-│ TVPI             2.13x                     │
-│ DPI              0.56x                     │
-│ IRR              18.4%                     │
-└────────────────────────────────────────────┘
-```
-
-Additional views:
-
-```text
-Fund Performance
-Portfolio Exposure
-Investment History
-Capital Activity
-Cash Flows
-Distributions
-Unfunded Commitment
-Documents
-Tax Documents
-Quarterly Reports
-Investor Communications
-```
-
----
-
-# ⚖️ Commercial vs Open-Source
-
-| Capability                    | Commercial LP Platform | Open-Source Stack   |
-| ----------------------------- | ---------------------- | ------------------- |
-| LP Portal                     | ✅                      | ✅                   |
-| Investor Dashboard            | ✅                      | ✅                   |
-| Fund Reporting                | ✅                      | ✅                   |
-| Documents                     | ✅                      | ✅                   |
-| Capital Calls                 | ✅                      | Build / integrate   |
-| Distributions                 | ✅                      | Build / integrate   |
-| Fund Accounting               | ✅                      | ✅ Building blocks   |
-| Investor CRM                  | ✅                      | ✅                   |
-| Data Room                     | ✅                      | ✅                   |
-| K-1 Delivery                  | ✅                      | Build / integrate   |
-| Tax Workflows                 | ✅                      | Build / integrate   |
-| Portfolio Analytics           | ✅                      | ✅                   |
-| AI Reporting                  | Increasingly           | ✅ Build / integrate |
-| SSO                           | ✅                      | ✅                   |
-| MFA                           | ✅                      | ✅                   |
-| RBAC                          | ✅                      | ✅                   |
-| Row-Level Security            | ✅                      | ✅                   |
-| Audit Logs                    | ✅                      | ✅                   |
-| Self Hosting                  | Usually ❌              | ✅                   |
-| Source Code                   | ❌                      | ✅                   |
-| Data Ownership                | Vendor-dependent       | Full control        |
-| Customization                 | Medium / High          | Very High           |
-| Vendor Lock-In                | Higher                 | Lower               |
-| Implementation                | Faster                 | More engineering    |
-| Fund Administration           | Often integrated       | External            |
-| Regulatory Operations         | Often supported        | Self-managed        |
-| Banking / Custody Integration | Integrated             | Build / integrate   |
-| Infrastructure                | Managed                | Self-managed        |
-
----
-
-# 📊 LP Portal Technology Comparison
-
-| Platform / Project | LP Portal | Fund Accounting | CRM | Reporting | Portfolio Analytics | Self-Host |
-| ------------------ | :-------: | :-------------: | :-: | :-------: | :-----------------: | :-------: |
-| Juniper Square     |     ✅     |        ✅        |  ✅  |     ✅     |          ✅          |     ❌     |
-| Allvue             |     ✅     |        ✅        |  ✅  |     ✅     |          ✅          |     ❌     |
-| Dynamo             |     ✅     |        ✅        |  ✅  |     ✅     |          ✅          |     ❌     |
-| InvestorFlow       |     ✅     |        ⚠️       |  ✅  |     ✅     |          ✅          |     ❌     |
-| Fundwave           |     ✅     |        ✅        |  ✅  |     ✅     |          ✅          |     ❌     |
-| Carta              |     ✅     |        ✅        |  ✅  |     ✅     |          ✅          |     ❌     |
-| Visible            |     ⚠️    |        ❌        |  ⚠️ |     ✅     |          ✅          |     ❌     |
-| eFront             |     ✅     |        ✅        |  ✅  |     ✅     |          ✅          |     ❌     |
-| Backstop           |     ✅     |        ⚠️       |  ✅  |     ✅     |          ✅          |     ❌     |
-| SEI Archway        |     ✅     |        ✅        |  ⚠️ |     ✅     |          ✅          |     ❌     |
-| Hemrock Reporting  |     ✅     |        ✅        |  ⚠️ |     ✅     |          ✅          |     ✅     |
-| Apache Fineract    |     ❌     |        ✅        |  ⚠️ |     ⚠️    |          ❌          |     ✅     |
-| Formance           |     ❌     |        ✅        |  ❌  |     ⚠️    |          ❌          |     ✅     |
-| Metabase           |     ❌     |        ❌        |  ❌  |     ✅     |          ✅          |     ✅     |
-| Superset           |     ❌     |        ❌        |  ❌  |     ✅     |          ✅          |     ✅     |
-| Twenty             |     ❌     |        ❌        |  ✅  |     ⚠️    |          ❌          |     ✅     |
-| Keycloak           |     ❌     |        ❌        |  ❌  |     ❌     |          ❌          |     ✅     |
-| MinIO              |     ❌     |        ❌        |  ❌  |     ❌     |          ❌          |     ✅     |
-
----
-
-# 🚀 Recommended Open-Source Stacks
-
-## 🏆 1. Closest Open-Source LP Portal
-
-```text
-Hemrock Reporting
-+
-PostgreSQL
-+
-Keycloak
-+
-MinIO
-```
-
-This is the most direct starting point when the goal is specifically an open-source LP portal rather than assembling one entirely from components.
-
-Hemrock explicitly combines portfolio monitoring, fund accounting, LP reporting and an LP portal in one open-source platform.
-
----
-
-# 🏦 2. Institutional LP Portal
-
-```text
-Hemrock
-+
-Formance
-+
-PostgreSQL
-+
-Keycloak
-+
-MinIO
-+
-Apache Superset
-+
-Temporal
-+
-Kafka
-```
-
-Suitable for building a more modular institutional architecture.
-
----
-
-# 💰 3. Fund Accounting + LP Portal
-
-```text
-Apache Fineract
-        +
-Formance
-        +
-Hemrock
-        +
-Keycloak
-        +
-MinIO
-```
-
----
-
-# 📊 4. LP Analytics Platform
-
-```text
-PostgreSQL
-     +
-dbt
-     +
-Cube
-     +
-Apache Superset
-     +
-Next.js
-```
-
-Useful when the primary requirement is:
-
-* LP dashboards
-* Fund performance
-* Portfolio analytics
-* Exposure analysis
-* Custom reporting
-
----
-
-# 🤝 5. Investor CRM + LP Portal
-
-```text
-Twenty / Frappe CRM
-        +
-Hemrock
-        +
-Keycloak
-        +
-MinIO
-        +
-Metabase
-```
-
----
-
-# 🤖 6. AI-Powered LP Portal
-
-```text
-                     LP
-                      │
-                      ▼
-                 LP Portal
-                      │
-                      ▼
-                AI Assistant
-                      │
-          ┌───────────┼───────────┐
-          ▼           ▼           ▼
-       Fund Data   Documents   Reports
-          │           │           │
-          ▼           ▼           ▼
-      PostgreSQL    Qdrant      MinIO
-          │           │
-          └──────┬────┘
-                 ▼
-              LLM
-         vLLM / Ollama
-```
-
-Possible components:
-
-```text
-Hemrock
-+
-LlamaIndex
-+
-Qdrant
-+
-vLLM
-+
-Docling
-+
-PostgreSQL
-```
-
----
-
-# 🏢 Building a Juniper Square Alternative
-
-A Juniper Square-style architecture can be decomposed into:
-
-```text
-                         GP / FUND MANAGER
-                                │
-                                ▼
-                         Operating Platform
-                                │
-         ┌──────────────────────┼──────────────────────┐
-         │                      │                      │
-         ▼                      ▼                      ▼
-     Fundraising             Accounting             Investors
-         │                      │                      │
-         ▼                      ▼                      ▼
-       CRM                   Ledger                 LP Portal
-                                │                      │
-                                ▼                      ▼
-                          Fund Reporting           Documents
-                                │                      │
-                                └──────────┬───────────┘
-                                           ▼
-                                     LP Analytics
-```
-
-Possible open-source implementation:
-
-```text
-CRM
-→ Twenty / Frappe CRM
-
-Fund Accounting
-→ Formance / Fineract
-
-LP Reporting
-→ Hemrock
-
-Analytics
-→ Superset / Metabase
-
-Documents
-→ MinIO / Nextcloud
-
-Identity
-→ Keycloak
-
-Workflow
-→ Temporal
-
-Database
-→ PostgreSQL
-
-AI
-→ LlamaIndex + vLLM
-```
-
----
-
-# 🏦 Building an Open-Source LP Portal
-
-A minimal architecture:
-
-```text
-                   LP
-                    │
-                    ▼
-             ┌─────────────┐
-             │  Next.js    │
-             │  LP Portal  │
-             └──────┬──────┘
-                    │
-             ┌──────▼──────┐
-             │  Keycloak   │
-             └──────┬──────┘
-                    │
-             ┌──────▼──────┐
-             │  FastAPI    │
-             └──────┬──────┘
-                    │
-       ┌────────────┼────────────┐
-       ▼            ▼            ▼
-   PostgreSQL      MinIO      Reporting
-       │                         │
-       ▼                         ▼
-   Fund Data                 Superset
-```
-
----
-
-# 🧱 LP Portal Data Model
-
-A useful relational model:
-
-```text
-Investor
-   │
-   ├── Investor Users
-   │
-   ├── Commitments
-   │
-   ├── Capital Accounts
-   │
-   └── Documents
-          │
-          ▼
-        Fund
-          │
-          ├── Investments
-          ├── Capital Calls
-          ├── Distributions
-          ├── NAV
-          └── Reports
-```
-
-Example:
-
-```text
-Investor
- ├── Alice Capital
- │
- ├── Fund I
- │    ├── Commitment
- │    ├── Capital Calls
- │    ├── Distributions
- │    ├── NAV
- │    └── Documents
- │
- └── Fund II
-      ├── Commitment
-      ├── Capital Calls
-      ├── Distributions
-      └── Documents
-```
-
----
-
-# 🌐 Open-Source LP Technology Landscape
-
-```mermaid
-mindmap
-  root((LP Portal))
-    LP Portal
-      Hemrock Reporting
-      Next.js
-      React
-    Fund Accounting
-      Formance
-      Apache Fineract
-      ERPNext
-      Odoo
-    Portfolio
-      Hemrock
-      Portfolio Performance
-      Ghostfolio
-    CRM
-      Twenty
-      Frappe CRM
-      EspoCRM
-      SuiteCRM
-    Analytics
-      Metabase
-      Superset
-      Grafana
-      Redash
-      Lightdash
-      Cube
-    Documents
-      MinIO
-      Nextcloud
-      Paperless-ngx
-      Mayan EDMS
-      OpenKM
-    Identity
-      Keycloak
-      Authentik
-      Zitadel
-      ORY
-      Casbin
-      OPA
-    Reporting
-      JasperReports
-      WeasyPrint
-      Pandoc
-      Quarto
-      ReportLab
-    AI
-      LlamaIndex
-      Haystack
-      Qdrant
-      vLLM
-      Ollama
-      Docling
-    Infrastructure
-      PostgreSQL
-      Kafka
-      Redis
-      Temporal
-      Kubernetes
-```
-
----
-
-# 🧠 Why Open-Source LP Infrastructure Matters
-
-Commercial LP portals provide substantial value by combining:
-
-```text
-Fund Accounting
-      +
-Investor Relations
-      +
-Reporting
-      +
-Documents
-      +
-CRM
-      +
-Analytics
-      +
-Security
-```
-
-The open-source opportunity is different.
-
-Rather than reproducing every commercial feature in one monolithic application, organizations can build a modular stack:
-
-```text
-                    OPEN-SOURCE
-                         │
-       ┌─────────────────┼─────────────────┐
-       │                 │                 │
-       ▼                 ▼                 ▼
-      Data             Logic            Experience
-       │                 │                 │
-       ▼                 ▼                 ▼
- PostgreSQL          Formance           Next.js
- Fineract            Hemrock            React
- MinIO               Temporal            Metabase
-                     Fineract            Keycloak
-```
-
-This provides control over:
-
-* Data ownership
-* Deployment
-* Security architecture
-* User experience
-* Investor-level permissions
-* Reporting logic
-* AI models
-* Integrations
-* Infrastructure
-* Vendor dependencies
-
-The most compelling open-source approach is therefore not necessarily a single "Juniper Square clone", but a **composable private-markets operating system**.
-
----
-
-# 🔥 Open-Source LP Portal Reference Stack
-
-```text
-┌──────────────────────────────────────────────┐
-│                  LP PORTAL                   │
-│             Next.js / React                  │
-└──────────────────────┬───────────────────────┘
-                       │
-┌──────────────────────▼───────────────────────┐
-│              IDENTITY & SECURITY             │
-│       Keycloak + OPA + PostgreSQL RLS        │
-└──────────────────────┬───────────────────────┘
-                       │
-┌──────────────────────▼───────────────────────┐
-│                 API LAYER                    │
-│             FastAPI / GraphQL                │
-└──────────────────────┬───────────────────────┘
-                       │
-       ┌───────────────┼────────────────┐
-       │               │                │
-       ▼               ▼                ▼
-   FUND DATA        REPORTING       DOCUMENTS
-       │               │                │
-       ▼               ▼                ▼
-  Fineract          Hemrock           MinIO
-  Formance          Superset          Nextcloud
-       │               │                │
-       └───────────────┼────────────────┘
-                       ▼
-                PostgreSQL
-                       │
-             ┌─────────┴─────────┐
-             ▼                   ▼
-         Analytics               AI
-             │                   │
-             ▼                   ▼
-        Metabase /          LlamaIndex /
-        Superset            vLLM / Qdrant
-```
-
----
-
-# 🎯 Recommended Projects by Use Case
-
-| Use Case                  | Recommended Starting Point                           |
-| ------------------------- | ---------------------------------------------------- |
-| Open-source LP portal     | **Hemrock Reporting**                                |
-| Fund accounting           | **Formance / Fineract**                              |
-| LP capital tracking       | **Hemrock Reporting**                                |
-| Portfolio reporting       | **Hemrock + Superset**                               |
-| Investor CRM              | **Twenty / Frappe CRM**                              |
-| Data room                 | **Nextcloud / MinIO**                                |
-| Document management       | **Paperless-ngx / Mayan EDMS**                       |
-| Authentication            | **Keycloak**                                         |
-| Authorization             | **OPA / Casbin**                                     |
-| BI                        | **Metabase / Apache Superset**                       |
-| Fund analytics            | **Cube + Superset**                                  |
-| PDF reports               | **WeasyPrint / JasperReports**                       |
-| E-signatures              | **Documenso / OpenSign**                             |
-| AI document processing    | **Docling**                                          |
-| AI investor assistant     | **LlamaIndex + Qdrant + vLLM**                       |
-| Workflow automation       | **Temporal**                                         |
-| Event infrastructure      | **Kafka / NATS**                                     |
-| Object storage            | **MinIO**                                            |
-| Database                  | **PostgreSQL**                                       |
-| Complete modular LP stack | **Hemrock + Formance + Keycloak + MinIO + Superset** |
-
----
-
-# 🧩 Commercial LP Portal → OSS Architecture Mapping
-
-```text
-Juniper Square
-      │
-      ├── LP Portal          → Hemrock / Next.js
-      ├── Fund Data          → PostgreSQL / Fineract
-      ├── Fund Accounting    → Formance / Fineract
-      ├── Investor CRM       → Twenty
-      ├── Documents          → MinIO / Nextcloud
-      ├── Analytics          → Superset
-      └── AI                 → LlamaIndex + vLLM
-
-
-Allvue
-      │
-      ├── Fund Accounting    → Fineract / Formance
-      ├── Investor Portal    → Hemrock / Next.js
-      ├── Portfolio          → PostgreSQL
-      ├── Reporting          → Superset
-      └── CRM                → Twenty
-
-
-Dynamo
-      │
-      ├── Investor CRM       → Twenty / Frappe CRM
-      ├── Portfolio          → PostgreSQL
-      ├── Reporting          → Superset
-      └── Documents          → Nextcloud / MinIO
-
-
-Carta
-      │
-      ├── Fund Data          → Fineract / Formance
-      ├── LP Reporting       → Hemrock
-      ├── Documents          → MinIO
-      ├── CRM                → Twenty
-      └── Analytics          → Superset
-
-
-Visible
-      │
-      ├── Portfolio Data     → PostgreSQL
-      ├── Investor Updates   → Hemrock
-      └── Analytics          → Metabase / Superset
-```
-
----
-
-# 🚀 Production Open-Source LP Platform
-
-A more complete architecture:
-
-```text
-                         INTERNET
-                            │
-                            ▼
-                       CDN / WAF
-                            │
-                            ▼
-                       API Gateway
-                            │
-                            ▼
-                     Authentication
-                       Keycloak
-                            │
-                            ▼
-                       LP Portal
-                     Next.js / React
-                            │
-          ┌─────────────────┼─────────────────┐
-          │                 │                 │
-          ▼                 ▼                 ▼
-       Investor          Reporting         Documents
-       Services           Engine             Service
-          │                 │                 │
-          ▼                 ▼                 ▼
-       PostgreSQL         Superset           MinIO
-          │                 │                 │
-          └─────────────────┼─────────────────┘
-                            ▼
-                     Fund Data Layer
-                            │
-             ┌──────────────┼──────────────┐
-             ▼              ▼              ▼
-          Fineract       Formance        Hemrock
-             │              │              │
-             └──────────────┼──────────────┘
-                            ▼
-                      Data Warehouse
-                            │
-                            ▼
-                      AI / Analytics
-```
+* 🌟 **Star** this repository to help others discover open-source investor relations infrastructure.
+* 🔀 **Fork** it to build your own internal stack evaluation matrix.
+* 📢 **Share** it with your fellow General Partners, LPs, and fintech engineers.
+* ☕ **Sponsor / Buy me a coffee:** Support ongoing open-source research via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
 
 ---
 
 # 🤝 Contributing
 
-Contributions are welcome!
+Contributions are welcome! If you would like to submit a new open-source tool, SaaS platform, or architectural blueprint, please review our [Contributing Guidelines](.github/CONTRIBUTING.md) and submit a Pull Request.
 
-Please consider adding:
+---
 
-* Open-source LP portals
-* Fund-management systems
-* Investor reporting platforms
-* Fund accounting systems
-* Portfolio management software
-* Investor CRMs
-* Data rooms
-* Document-management systems
-* Open-source e-signature platforms
-* Investor analytics tools
-* Fund-performance analytics
-* Capital-call systems
-* Distribution systems
-* K-1 delivery infrastructure
-* Investor communication systems
-* AI investor assistants
-* Open-source private-markets infrastructure
-* Self-hosted financial reporting systems
+## 📈 Star History
 
-When adding a project, please clearly distinguish between:
-
-* **Fully open-source**
-* **Open-core**
-* **Source available**
-* **Business Source License**
-* **Hosted open-source**
-* **Commercial software using open-source components**
-
-In particular, do not treat source-available software as equivalent to permissively licensed open-source software.
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Limited-Partner-Portal&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Limited-Partner-Portal&type=date&legend=top-left)
 
 ---
 
 # ⚠️ Disclaimer
 
-This repository is an independent technical curation and is **not affiliated with or endorsed by any company or project listed here**.
-
-LP portals contain highly sensitive financial and personal information. Production deployments should carefully consider:
-
-* Investor-level authorization
-* Row-level security
-* Document permissions
-* Encryption
-* MFA
-* SSO
-* Audit logging
-* Data retention
-* Backup and disaster recovery
-* Data residency
-* Regulatory requirements
-* Fund-administration controls
-* Tax reporting
-* Financial statement controls
-* SOC 2 / ISO 27001 requirements where applicable
-* Privacy regulations
-* Vendor and infrastructure security
-
-Open-source software provides technology building blocks; it does not automatically provide regulatory compliance, fund administration, audit controls or investment-management services.
-
-Commercial platforms also frequently combine software with operational services and integrations that are difficult to reproduce purely through software.
-
-Licensing can change over time. Always verify the current license for both the project and its dependencies before commercial deployment.
-
----
-
-## ⭐ Star This Repository
-
-If you are interested in:
-
-* Limited Partner Portals
-* Investor Relations
-* Private Equity Software
-* Venture Capital Software
-* Fund Management
-* Fund Accounting
-* Portfolio Reporting
-* Private Markets
-* Alternative Investments
-* Investor Analytics
-* Open-Source Finance
-* Open-Source Fintech
-
-consider giving this repository a ⭐ **Star** and contributing new projects.
+This repository is an independent technical curation and is **not affiliated with or endorsed by any vendor listed here**. LP portals deal with confidential financial statements and personally identifiable information (PII). Deploying production LP systems requires strict adherence to security protocols (SOC 2, ISO 27001), regulatory compliance (SEC, GDPR), and independent financial auditing.
 
 ---
 
 **Last updated: September 2026**
-
